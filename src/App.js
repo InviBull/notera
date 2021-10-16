@@ -43,7 +43,7 @@ const App = () => {
       notes = notes.filter(noteObject => noteObject.note !== pToDel.textContent);
 
       localStorage.setItem("notes", JSON.stringify(notes));
-      setNotesData(notesDat => [...notesDat]);
+      setNotesData(notes);
   }
 
   useEffect(() => {
