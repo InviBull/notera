@@ -1,38 +1,98 @@
-.App {
-  text-align: center;
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100&display=swap');
+
+:root{
+  --primary:#1a1919;
+  --secondary:#e5e5e5;
+  --runner-up-1:rgb(93, 146, 214);
+  --runner-up-2:#0077b6ff;
+  --runner-up-3:#272424;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+::placeholder{
+  color: var(--secondary);
+  font-weight: bold;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+body{
+  background-color: var(--primary);
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.container{
+  margin-left: 30px;
+  margin-top: 70px;
+}
+
+.container .newNoteInput{
+
+  margin-top: 20px;
+  padding: 2px;
+
   display: flex;
-  flex-direction: column;
+
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
 }
 
-.App-link {
-  color: #61dafb;
+#newNoteInputBox{
+  margin-top: 10px;
+  margin-bottom: 10px;
+
+  width: 80%;
+  
+  outline: none;
+  border: none;
+
+  border-bottom: 2px solid var(--runner-up-2);
+  background-color: var(--primary);
+  
+  color: var(--secondary);
+
+  font-family: 'Inter', sans-serif;
+  font-weight: bold;
+  font-size: 20px;
+
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+#newNoteClickButton, #clearNoteClickButton, .deleteNoteClickButton{
+  margin-top: 10px;
+  margin-bottom: 10px;
+  margin-left: 5px;
+  margin-right: 5px;
+
+  background-color: var(--runner-up-3);
+  color: var(--secondary);
+
+  cursor: pointer;
+  
+  outline: none;
+  border: none;
+  border-radius: 10px;
+
+  padding: 10px;
+
+}
+
+.container .notes{
+    padding: 10px;
+}
+
+.note-card{
+    margin-top: 10px;
+    margin-bottom: 10px;
+
+    width: fit-content;
+    height: 50px;
+    
+    background-color: var(--runner-up-3);
+    
+    padding: 7px;
+    
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+}
+
+.note-card p{
+    color: var(--secondary);
 }
